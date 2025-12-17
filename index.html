@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBMC - School Club Info</title>
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.10.1/core.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body { background-color: #91a7ff; font-family: 'Lora', serif; color: white; padding-top: 80px; }
+        .hero-container { background-color: #4f72ff; padding: 40px; border-radius: 10px; margin-bottom: 20px; }
+        .box { background-color: #2f3cf7; padding: 20px; border-radius: 8px; margin-bottom: 20px; min-height: 150px; }
+        .footer-section { background-color: #212529; padding: 20px; margin-top: 40px; border-radius: 10px 10px 0 0; }
+        #ann_list { list-style-type: square; padding-left: 20px; }
+        #ann_list li { margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">O.B. Montessori Center</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero-container text-center">
+            <h1>School Information Portal</h1>
+            <p class="lead">Managing announcements and campus details</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="box">
+                    <h3>Latest Announcements</h3>
+                    <ul id="ann_list">
+                        </ul>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="box">
+                    <h3>Post Announcement</h3>
+                    <div class="mb-3">
+                        <input type="text" id="ann_text" class="form-control" placeholder="Type announcement here...">
+                    </div>
+                    <button class="btn btn-warning w-100" py-click="add_announcement">Post to List</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section text-center">
+            <h5>Campus Contact Info</h5>
+            <div id="contact" class="text-info">
+                </div>
+        </div>
+    </div>
+    </body>
